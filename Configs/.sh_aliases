@@ -1,0 +1,4 @@
+alias sysupdate='sh ~/ConfigWSL/Scripts/sysupdate.sh'
+alias cleanmemory='sudo sh ~/ConfigWSL/Scripts/cleancacheswap.sh'
+alias shutdown='wsl.exe --shutdown'
+alias add-ssh-key='sh ~/ConfigWSL/Configs/.ssh_add_keys.sh'
