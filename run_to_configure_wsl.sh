@@ -6,7 +6,7 @@ echo "*                                                         *"
 echo "***********************************************************"
 echo
 # Variables
-config_folder="/home/$USER/ConfigWSL/"
+config_folder="/home/$USER/ConfigWSL/Configs"
 echo
 echo "====================> Adding repositories to install"
 echo
@@ -101,7 +101,7 @@ echo
 read -rp $"Press any key to Continue"
 echo
 cd ~
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf -y &&
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf &&
 echo
 echo "====================> Install vim"
 echo
@@ -127,9 +127,6 @@ echo
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 echo
 echo "--------------------> Configure files for zsh"
-echo
-echo "*** It will ask for Gihub\'s username and password or token."
-echo "The token is in LastPass."
 echo
 rm -f ~/.zshrc;
 rm -f ~/.sh_aliases;
@@ -164,6 +161,6 @@ sudo apt autoclean &&
 sudo apt autoremove -y &&
 timeout 3
 echo
-read -rp $"The system needs to reboot. Press any key to proceed..."
+echo "The system needs to be reloaded. Close WSL and open it again after finish."
+read -rp $"Press any key to finish..."
 echo
-exit
