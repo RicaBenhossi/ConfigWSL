@@ -102,6 +102,10 @@ read -rp $"Press any key to Continue"
 echo
 cd ~
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf &&
+sudo apt install libedit-dev &&
+sudo apt remove libssl-dev &&
+sudo apt update &&
+sudo apt install libssl-dev -y &&
 echo
 echo "====================> Install vim"
 echo
