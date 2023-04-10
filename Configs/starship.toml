@@ -1,0 +1,49 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+$all\
+$fill\
+$status\
+$cmd_duration\
+$line_break\
+$character\
+"""
+
+[character]
+success_symbol = '[⮞](bold green)'
+error_symbol = '[⮞](bold green)'
+
+[fill]
+symbol = ' '
+
+[cmd_duration]
+format = ' [Took](bold italic #a9a9a9) [$duration]($style)'
+style = 'bold italic bright-purple'
+
+[status]
+symbol = '🔴'
+success_symbol = '🟢'
+format = '[$symbol( $common_meaning)]($style)'
+pipestatus = true
+pipestatus_separator= '[ ➜ ](bold white)'
+pipestatus_format = '\[ $pipestatus \] [➜ ](bold blue)[$symbol( $common_meaning)]($style)'
+map_symbol = true
+disabled = false
+
+[git_status]
+format = '(❬ $all_status❭ )(❬ $ahead_behind(bold)❭ )'
+ahead = '[🡹\(${count}\) ](bold #e99393)'
+behind = '[🢃\(${count}\) ](bold #99cc7f)'
+conflicted = '[conflicted\(${count}\) ](#E83B20)'
+deleted = 'deleted '
+diverged = '❕ 🡹{ahead_count} 🢃${behind_count} '
+modified = '[modified\(${count}\) ](#E83B20)'
+renamed = 'renamed '
+staged = '[staged\(${count}\) ](bright-green)'
+stashed = '[stashed\(${count}\) ](#FFAF19)'
+untracked = '[untracked\(${count}\) ](#99badd)'
+up_to_date = '[up to date ](bright-green)'

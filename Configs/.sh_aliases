@@ -1,4 +1,5 @@
 alias sysupdate='sh ~/ConfigWSL/Scripts/sysupdate.sh'
 alias cleanmemory='sudo sh ~/ConfigWSL/Scripts/cleancacheswap.sh'
-alias shutdown='wsl.exe --shutdown'
-alias add-ssh-key='sh ~/ConfigWSL/Configs/.ssh_add_keys.sh'
+alias shutdown='wsl.exe --shutdown Ubuntu'
+alias redis-start='redis-server --daemonize yes && echo "pid of redis-server: " $(pidof redis-server)'
+alias redis-stop='killall -9 redis-server && echo "redis-server was stopped."'

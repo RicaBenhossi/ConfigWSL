@@ -7,7 +7,7 @@ echo "***********************************************************"
 echo
 # Variables
 config_folder="/home/$USER/ConfigWSL/Configs"
-echo
+
 echo "====================> Adding repositories to install"
 echo
 read -rp $"Press any key to Continue"
@@ -42,12 +42,12 @@ echo
 # echo
 # sudo apt install ssh-askpass -y &&
 # echo
-# echo "====================> install keychain"
-# echo
-# read -rp $"Press any to Continue"
-# echo
-# sudo apt-get install keychain -y &&
-# echo
+echo "====================> install keychain"
+echo
+read -rp $"Press any to Continue"
+echo
+sudo apt-get install keychain -y &&
+echo
 echo "====================> Install latest Git"
 echo
 read -rp $"Press any key to Continue"
