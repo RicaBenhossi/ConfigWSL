@@ -4,6 +4,8 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
+command_timeout = 50000
+
 format = """
 $all\
 $fill\
@@ -40,7 +42,7 @@ ahead = '[🡹\(${count}\) ](bold #e99393)'
 behind = '[🢃\(${count}\) ](bold #99cc7f)'
 conflicted = '[conflicted\(${count}\) ](#E83B20)'
 deleted = 'deleted '
-diverged = '❕ 🡹{ahead_count} 🢃${behind_count} '
+diverged = 'Diverged [🡹{$ahead_count}](bold #e99393) [🢃{$behind_count}](bold #99cc7f) '
 modified = '[modified\(${count}\) ](#E83B20)'
 renamed = 'renamed '
 staged = '[staged\(${count}\) ](bright-green)'

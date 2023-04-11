@@ -90,8 +90,6 @@ export ZSH_HIGHLIGHT_MAXLENGTH=60
 #)
 
 #source $ZSH/oh-my-zsh.sh
-<<<<<<< Updated upstream
-=======
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -100,7 +98,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
->>>>>>> Stashed changes
 
 # User Aliases
 source $HOME/.sh_aliases
